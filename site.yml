@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - gitlab-setup
+    - gitlab-runner-setup

@@ -1,0 +1,5 @@
+[gitlab-server]
+172.16.1.11 
+[gitlab-server:vars]
+ansible_user=vagrant 
+ansible_password=vagrant
