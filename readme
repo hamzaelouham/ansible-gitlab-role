@@ -1,0 +1,13 @@
+az ad sp create-for-rbac --role Contributor --scopes /subscriptions/e480db56-5fcc-4df9-9326-42775664845d  --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"
+
+the command above doesn't work for first time so after a lot of research 
+i found that I need to Create an Azure service principal there for packer
+to operate you have to follow these steps :
+
+1 - navigate to Azure search bar tap -> Azure active directory 
+2 - click on app registerations
+3 - Browse to Identity > Applications > App registrations then select New registration. 
+
+helpfull information : https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+youtube video : https://www.youtube.com/watch?v=Kf1Tai_BkWU
